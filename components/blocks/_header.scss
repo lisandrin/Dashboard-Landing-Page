@@ -1,0 +1,101 @@
+header{ 
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #f3f4f7; 
+    
+    .header-wrapper{
+         width: 100%;
+         background-color: #fff;
+         display: flex; 
+         min-height: 71px;
+         z-index: 100;
+         position: fixed;
+ 
+        @media (max-width:1158px) {
+            .social-icons{
+                display: none; 
+            }
+        }
+ 
+        @media (max-width:700px){
+            .header-wrapper{
+                width: 100%;
+            }
+            .nav{
+                display: none; 
+            }
+        }
+ 
+        @media (max-width:320px){
+            width: 100%;
+            .nav{
+                display: none; 
+            }
+        }
+ 
+        .logo{
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: flex;;
+            width: 30px;
+            margin-top: 25px;
+            opacity: 1;
+            margin-left: 20px;
+ 
+            h4{
+                color:#4b4b5a;
+                font-size:16px;
+                text-transform: uppercase;
+                padding-left: 42px;
+                padding-top: 2px;
+                font-weight: 900;
+                font-family: sans-serif;
+                letter-spacing: 1px;
+            }
+        }
+        nav{
+            width: 500px;
+            display: flex;
+            background-color: none;
+            margin-left: 60%;
+ 
+            input[type="search"]{
+                border: 1px solid #f3f4f7;
+                border-radius: .3rem;
+                display: inline-block;
+                width: 200px;
+                height: 35px;
+                background-color: #f3f4f7;
+                margin-top: 20px;
+                margin-left: 40px;
+                padding-left: 20px;
+                font-size: 15px;
+ 
+                @media (max-width:700px){
+                    overflow: hidden;
+                }
+            }
+            ul{
+                display: flex;
+                padding-top: 25px;
+                list-style: none;
+                padding-left: 40px;
+                li{
+                    padding-right: 25px;
+                    a{
+                        div{
+                            width: 25px;
+                            min-height: 25px;
+                            background-color:none;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                        }
+                        &hover{
+                            color: green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

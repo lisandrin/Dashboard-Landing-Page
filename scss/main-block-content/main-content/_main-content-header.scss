@@ -1,0 +1,57 @@
+.header{
+    padding: 20px;
+    background: $bgc;
+    color: #f8f9fa;
+    display: flex;
+
+    @media (max-width:1150px){
+        button{
+            display: none;
+        }
+    }
+
+    h4{
+        background-color: none;
+        margin-left:20px;
+        color:$fontdark;
+        font-family: arial;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-size: 19px;
+    }
+
+    input[type="calendar"]{ 
+        border: 1px solid $light;
+        border-radius: .3rem;
+        display: inline-block;
+        width: 180px;
+        height: 35px;
+        background-color: $light;
+        margin-left: 55%;
+        padding-left: 20px;
+        font-size: 15px;
+
+        @media (max-width:980px){
+                overflow: hidden; 
+        }
+    }
+    button{
+        border: 1px solid $textcolor;
+        border-radius: .3rem;
+        width: 150px;
+        height: 35px;
+        background-color: $textcolor;
+        margin-left: 0;
+        font-size: 15px;
+        cursor: pointer;
+        margin-left: 20px;
+
+        &:hover{
+            background-color: #97A4F3;
+        }
+
+        a{
+            color: $maincolor;
+        }
+    }
+}

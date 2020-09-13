@@ -1,0 +1,70 @@
+.revenue-section{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+
+    @media (max-width:1150px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media (max-width:700px) {
+        grid-template-columns: 1fr;
+    }
+
+    .cards{
+        min-height: 350px;
+        background-color: $maincolor;
+        display: block;
+        padding-top: 15px;
+        border-radius: 5px;
+
+        h4{
+            color: #4b4b5a;
+            font-size: 16px;
+            padding-left: 20px;
+            padding-bottom: 33px;
+            font-weight: bold;
+        }
+
+        .text{
+            display: block;
+            padding: 20px;
+            text-align: left;
+            
+            border-top: 1px solid grey;
+
+            h5{
+                color:$fontdark;
+                font-size: 22px;
+                font-weight: 500;
+                letter-spacing: 1px;
+            }
+
+            p{
+                color:$fontdark;
+                font-size: 14px;
+                font-weight: 300;
+                padding-top: 10px;
+            }
+        }
+
+        .chart{
+            background-color: khaki;
+            min-height: 280px;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .target-chart{
+            margin-left: 10px;
+            background-color: none;
+            min-height: 280px;
+            text-align:center; 
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}

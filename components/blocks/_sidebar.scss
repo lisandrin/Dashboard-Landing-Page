@@ -1,0 +1,143 @@
+.sidebar{
+    width: 250px;
+    height: 100%;
+    background: $maincolor;
+    padding: 0px 0px;
+    position: fixed;
+
+    .about{
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        // margin-bottom: 30px;
+        display: flex;
+        width: 250px;
+        min-height: 60px ;
+        padding: 20px;
+        background-color: $maincolor;
+
+        .admin-pic{
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background-color: $fontdark;
+            background-image: url(https://shreyu.coderthemes.com/assets/images/users/avatar-7.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .admin-text{
+            display: inline-block;
+            margin-left: 0;
+            width: 138px;
+
+            h5{
+                font-size: 17px;
+                color: $fontdark;
+                line-height: 16px;
+                font-weight: 300;
+            }
+
+            p{
+                font-size: 9px;
+                color: grey;
+                text-transform: uppercase;
+                font-weight: 300;
+                padding-top: 10px;
+                letter-spacing: 1px;
+                font-family: arial;
+              }
+        }
+    }
+    .scroll-bar{
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fff;
+            
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #d4d4d4;
+            border-radius: 8px;
+            border: 3px solid #d4d4d4;
+        }
+        ::-webkit-scrollbar-thumb:hover { 
+            background: #7c7c7c;
+        }
+        ul{
+            width: 250px;
+            height: 600px;
+            overflow-y: scroll;
+
+        .list-title{
+            padding: 15px 30px 10px 30px;
+            letter-spacing: .05em;
+            pointer-events: none;
+            cursor: default;
+            font-size: .6875rem;
+            text-transform: uppercase;
+            color: #4b4b5a;
+        }
+
+        .dash{
+            display: flex;
+            
+            display: flex;
+            background-color: #f7f7ff;
+            border-left: 3px solid $textcolor;
+
+            span{
+                width: 20px;
+                height: 20px;
+                color: #fff;
+                background-color: #43d39e;
+                border-radius: .2rem;
+                text-align: center;
+                margin-left: 50px;
+            }
+
+            a{
+                color: $textcolor;
+                font-size: 15px;
+            }
+        }
+        li{ 
+            cursor: pointer;
+
+            ul{
+                display: none;
+            }
+
+            &:hover{
+                color: $textcolor;
+                background-color: #f7f7ff;
+                border-left: 3px solid $textcolor;
+            }
+
+            a{
+                color: #4b4b5a;
+                font-size: 15px;
+                display: flex;
+                padding-left: 30px;
+                padding-top: 18px;
+                padding-bottom: 18px;
+
+
+                &:hover{
+                    color: $textcolor;
+                    background-color: #f7f7ff;
+                }
+
+                .fas{
+                    width: 30px;
+                }
+                .far{
+                    width: 30px;
+                }
+            }
+        }
+    }         
+}
+}

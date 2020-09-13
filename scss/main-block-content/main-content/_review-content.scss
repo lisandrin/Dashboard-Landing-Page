@@ -1,0 +1,172 @@
+.review-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    background-color: $bgc;
+
+    @media (max-width:1150px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media (max-width:700px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media (max-width:320px) {
+        grid-template-columns: 1fr;
+    }
+
+    .cards{
+        min-height: 450px;
+        background-color: $maincolor;
+        display: block;
+        padding-top: 15px;
+        border-radius: 5px;
+
+        h4{
+            color: #4b4b5a;
+            font-size: 16px;
+            padding-left: 20px;
+            padding-bottom: 33px;
+            font-weight: bold;
+        }
+
+        ul{
+            display: block;
+            list-style: none;
+            text-decoration: none;
+            background-color: none;
+
+            li{
+                display: flex;
+                border-top: 1px solid #f6f6f7;
+                padding-left: 10px;
+
+                .text{
+                    display: block;
+                    padding:10px;
+                    color:$gray;
+
+                    h5{
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: #333;
+                    }
+
+                    p{
+                        font-size: 12px;
+                    }
+                }
+
+                .pic{
+                    width: 50px;
+                    min-height: 50px;
+                    margin:10px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    border-radius: 10px;
+                    background-image: url(./imgs/web.png);
+                }
+            }
+        }
+        .pic{
+            background-image: url(./imgs/chat.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            min-height: 330px;
+            padding-top: 10px;
+        }
+
+        .conv{
+            border: 1px solid grey;
+            border-radius: .3rem;
+            display: inline-block;
+            width: 200px;
+            height: 35px;
+            background-color:$light;
+            font-size: 15px;
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+
+        button{
+            width: 50px;
+            height: 35px;
+            background-color: #ff5c75;
+            font-size: 15px;
+            border: 1px solid $maincolor;
+            border-radius: .3rem;
+            color:$maincolor;
+            margin-left: 40px;
+        }
+    }
+
+    .task-cards{
+        min-height: 380px;
+        background-color: $maincolor;
+        display: block;
+        padding-top: 15px;
+        border-radius: 5px;
+        overflow: hidden;
+        width: 400px;
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fff;
+            
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7c7c7c;
+            border-radius: 8px;
+            border: 3px solid #d4d4d4;
+        }
+        ::-webkit-scrollbar-thumb:hover { 
+            background:#7c7c7c;
+        }
+
+        h4{
+            color: #4b4b5a; 
+            font-size: 16px;
+            padding-left: 20px;
+            padding-bottom: 33px;
+            font-weight: bold;
+        }
+
+        ul{
+            display: block;
+            list-style: none;
+            text-decoration: none;
+            background-color: none;
+            overflow-y: scroll;
+            width: 380px;
+            height: 380px;
+
+            li{
+                display: flex;
+                padding-left: 10px;
+
+                .task-text{
+                    display: block;
+                    padding:10px;
+                    color: $gray;
+                    padding:15px;
+
+                    h5{
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: $gray;
+                    }
+
+                    p{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
