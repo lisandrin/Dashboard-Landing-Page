@@ -71,58 +71,99 @@
             height: 600px;
             overflow-y: scroll;
 
-        .list-title{
-            padding: 15px 30px 10px 30px;
-            letter-spacing: .05em;
-            pointer-events: none;
-            cursor: default;
-            font-size: .6875rem;
-            text-transform: uppercase;
-            color: #4b4b5a;
-        }
-
-        .dash{
-            display: flex;
-            
-            display: flex;
-            background-color: #f7f7ff;
-            border-left: 3px solid $textcolor;
-
-            span{
-                width: 20px;
-                height: 20px;
-                color: #fff;
-                background-color: #43d39e;
-                border-radius: .2rem;
-                text-align: center;
-                margin-left: 50px;
+            .list-title{
+                padding: 15px 30px 10px 30px;
+                letter-spacing: .05em;
+                pointer-events: none;
+                cursor: default;
+                font-size: .6875rem;
+                text-transform: uppercase;
+                color: #4b4b5a;
             }
 
-            a{
-                color: $textcolor;
-                font-size: 15px;
-            }
-        }
-        li{ 
-            cursor: pointer;
-
-            ul{
-                display: none;
-            }
-
-            &:hover{
-                color: $textcolor;
+            .dash{
+                display: flex;
                 background-color: #f7f7ff;
                 border-left: 3px solid $textcolor;
+
+                span{
+                    width: 20px;
+                    height: 20px;
+                    color: #fff;
+                    background-color: #43d39e;
+                    border-radius: .2rem;
+                    text-align: center;
+                    margin-left: 50px;
+                }
+
+                a{
+                    color: $textcolor;
+                    font-size: 15px;
+                }
             }
 
-            a{
-                color: #4b4b5a;
-                font-size: 15px;
-                display: flex;
-                padding-left: 30px;
-                padding-top: 18px;
-                padding-bottom: 18px;
+            .drop{  
+                display: block;
+                background-color: #f7f7f7;
+                border-left: 3px solid $textcolor;
+
+                a{
+                    color: $fontdark;
+                    font-size: 15px;
+
+                    span{
+                        width: 20px;
+                        height: 20px;
+                        color: #333;
+                        background-color:white; 
+                        border-radius: .2em;
+                        text-align: center;
+                        margin-left: 70px;
+                    }
+                }
+
+                .dropmenu{
+                    display: block;
+                    background-color: $maincolor;
+                    height: 0;
+
+                    ul{
+                        width: 240px;
+                        padding: 0;
+                        margin:0;
+                        height: 0;
+
+                        li{
+                        color: #4b4b5a;
+                        font-size: 15px;
+                        }
+                    }
+                }
+            }
+            li{ 
+                cursor: pointer;
+                // display: flex;
+
+                &:hover{
+                    color: $textcolor;
+                    background-color: #f7f7ff;
+                    border-left: 3px solid $textcolor;
+                }
+                &:hover> .dropmenu{
+                    transition: all .6s ease;
+                    height: 150px;
+                    ul{
+                        height: 150px;
+                    }
+                }
+
+                a{
+                    color: #4b4b5a;
+                    font-size: 15px;
+                    display: flex;
+                    padding-left: 30px;
+                    padding-top: 18px;
+                    padding-bottom: 18px;
 
 
                 &:hover{
@@ -136,8 +177,8 @@
                 .far{
                     width: 30px;
                 }
+                }
             }
-        }
-    }         
-}
+        }         
+    }
 }
