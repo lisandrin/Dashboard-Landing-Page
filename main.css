@@ -22,7 +22,7 @@ header {
 
 header .header-wrapper {
   width: 100%;
-  background-color: #fff;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,7 +37,7 @@ header .header-wrapper {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
   header .header-wrapper .header-wrapper {
     width: 100%;
   }
@@ -46,7 +46,7 @@ header .header-wrapper {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   header .header-wrapper {
     width: 100%;
   }
@@ -103,6 +103,7 @@ header .header-wrapper nav input[type="search"] {
 @media (max-width: 700px) {
   header .header-wrapper nav input[type="search"] {
     overflow: hidden;
+    display: none;
   }
 }
 
@@ -137,6 +138,12 @@ header .header-wrapper nav ul li ahover {
   background: white;
   padding: 0px 0px;
   position: fixed;
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    display: none;
+  }
 }
 
 .sidebar .about {
@@ -260,20 +267,26 @@ header .header-wrapper nav ul li ahover {
   background-color: white;
   border-radius: .2em;
   text-align: center;
-  margin-left: 70px;
+  margin-left: 85px;
 }
 
 .sidebar .scroll-bar ul .drop .dropmenu {
   display: block;
   background-color: white;
   height: 0;
+  -webkit-transition: all 10s step-end;
+  transition: all 10s step-end;
+  overflow: hidden;
 }
 
 .sidebar .scroll-bar ul .drop .dropmenu ul {
-  width: 240px;
+  width: 230px;
   padding: 0;
   margin: 0;
   height: 0;
+  -webkit-transition: all 10s step-end;
+  transition: all 10s step-end;
+  overflow: hidden;
 }
 
 .sidebar .scroll-bar ul .drop .dropmenu ul li {
@@ -294,11 +307,13 @@ header .header-wrapper nav ul li ahover {
 .sidebar .scroll-bar ul li:hover > .dropmenu {
   -webkit-transition: all .6s ease;
   transition: all .6s ease;
-  height: 150px;
+  height: 145px;
 }
 
 .sidebar .scroll-bar ul li:hover > .dropmenu ul {
-  height: 150px;
+  height: 145px;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
 }
 
 .sidebar .scroll-bar ul li a {
@@ -408,6 +423,15 @@ header .header-wrapper nav ul li ahover {
 
 @media (max-width: 1150px) {
   .header button {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .header button {
+    display: none;
+  }
+  .header .cal {
     display: none;
   }
 }
@@ -628,37 +652,6 @@ header .header-wrapper nav ul li ahover {
   background-image: url(./imgs/web.png);
 }
 
-.review-content .cards .pic {
-  background-image: url(./imgs/chat.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  min-height: 330px;
-  padding-top: 10px;
-}
-
-.review-content .cards .conv {
-  border: 1px solid grey;
-  border-radius: .3rem;
-  display: inline-block;
-  width: 200px;
-  height: 35px;
-  background-color: #f3f4f7;
-  font-size: 15px;
-  margin-left: 20px;
-  padding-left: 10px;
-}
-
-.review-content .cards button {
-  width: 50px;
-  height: 35px;
-  background-color: #ff5c75;
-  font-size: 15px;
-  border: 1px solid white;
-  border-radius: .3rem;
-  color: white;
-  margin-left: 40px;
-}
-
 .review-content .task-cards {
   min-height: 380px;
   background-color: white;
@@ -666,7 +659,7 @@ header .header-wrapper nav ul li ahover {
   padding-top: 15px;
   border-radius: 5px;
   overflow: hidden;
-  width: 400px;
+  width: 100%;
 }
 
 .review-content .task-cards ::-webkit-scrollbar {
@@ -701,7 +694,7 @@ header .header-wrapper nav ul li ahover {
   text-decoration: none;
   background-color: none;
   overflow-y: scroll;
-  width: 380px;
+  width: 90%;
   height: 380px;
 }
 
@@ -729,6 +722,187 @@ header .header-wrapper nav ul li ahover {
   font-size: 12px;
 }
 
+.review-content .chatcards {
+  height: 450px;
+  background-color: #Fff;
+  display: block;
+  padding-top: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.review-content .chatcards ::-webkit-scrollbar {
+  width: 5px;
+}
+
+.review-content .chatcards ::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.review-content .chatcards ::-webkit-scrollbar-thumb {
+  background: #7c7c7c;
+  border-radius: 8px;
+  border: 3px solid #d4d4d4;
+}
+
+.review-content .chatcards ::-webkit-scrollbar-thumb:hover {
+  background: #7c7c7c;
+}
+
+.review-content .chatcards h4 {
+  color: #4b4b5a;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-bottom: 33px;
+  font-weight: bold;
+}
+
+.review-content .chatcards .chat-wrapper {
+  min-height: 380px;
+  background-color: white;
+  display: block;
+  padding-top: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.review-content .chatcards .chat-wrapper ul {
+  display: block;
+  grid-gap: 10px;
+  list-style: none;
+  text-decoration: none;
+  background-color: none;
+  width: 90%;
+  height: 320px;
+  background-color: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-y: scroll;
+}
+
+.review-content .chatcards .chat-wrapper ul li {
+  width: 100%;
+  background-color: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 50px;
+}
+
+.review-content .chatcards .chat-wrapper ul li .triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #f0f2fe transparent transparent transparent;
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -10px;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.review-content .chatcards .chat-wrapper ul li .pic {
+  width: 50px;
+  min-height: 40px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 100%;
+}
+
+.review-content .chatcards .chat-wrapper ul li .text {
+  width: 200px;
+  color: #5369f8;
+  background-color: #f0f2fe;
+  display: inline-block;
+  border-radius: 8px;
+  height: 50px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.review-content .chatcards .chat-wrapper ul li .text h6 {
+  font-size: 12px;
+}
+
+.review-content .chatcards .chat-wrapper ul li .text p {
+  font-size: 11px;
+}
+
+.review-content .chatcards .chat-wrapper ul li .text-sh {
+  width: 200px;
+  color: #333;
+  background-color: #f0f2fe;
+  display: inline-block;
+  border-radius: 8px;
+  height: 50px;
+  margin: 10px;
+  padding: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.review-content .chatcards .chat-wrapper ul li .text-sh h6 {
+  font-size: 12px;
+}
+
+.review-content .chatcards .chat-wrapper ul li .text-sh p {
+  font-size: 11px;
+}
+
+.review-content .chatcards .chat-wrapper ul li .text-sh .triangle-sh {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #f0f2fe transparent transparent transparent;
+  position: absolute;
+  margin-left: 180px;
+  padding-top: 30px;
+  margin-top: -47px;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.review-content .chatcards .chat-wrapper ul li .texttext {
+  width: 200px;
+  color: #5369f8;
+  background-color: white;
+  display: inline-block;
+  border-radius: 8px;
+  height: 50px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.review-content .chatcards .conv {
+  border: 1px solid grey;
+  border-radius: .3rem;
+  display: inline-block;
+  width: 200px;
+  height: 35px;
+  background-color: #f3f4f7;
+  font-size: 15px;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.review-content .chatcards button {
+  width: 50px;
+  height: 35px;
+  background-color: #ff5c75;
+  font-size: 15px;
+  border: 1px solid white;
+  border-radius: .3rem;
+  color: white;
+  margin-left: 40px;
+  margin-top: 5px;
+}
+
 .sale-content {
   display: -ms-grid;
   display: grid;
@@ -738,6 +912,7 @@ header .header-wrapper nav ul li ahover {
   background-color: none;
   padding-top: 20px;
   padding-left: 20px;
+  overflow: hidden;
 }
 
 @media (max-width: 980px) {
@@ -749,12 +924,12 @@ header .header-wrapper nav ul li ahover {
 
 @media (max-width: 625px) {
   .sale-content {
-    -ms-grid-columns: 0.5fr;
-        grid-template-columns: 0.5fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .sale-content {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -878,6 +1053,14 @@ header .header-wrapper nav ul li ahover {
   padding: 5px;
   letter-spacing: 1px;
   font-weight: 300;
+}
+
+@media (max-width: 650px) {
+  .main-content {
+    width: 100%;
+    padding: 0;
+    padding-right: 10px;
+  }
 }
 
 .main-block {

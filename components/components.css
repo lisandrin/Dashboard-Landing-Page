@@ -8,7 +8,7 @@ header {
 
 header .header-wrapper {
   width: 100%;
-  background-color: #fff;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,7 +23,7 @@ header .header-wrapper {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
   header .header-wrapper .header-wrapper {
     width: 100%;
   }
@@ -32,7 +32,7 @@ header .header-wrapper {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   header .header-wrapper {
     width: 100%;
   }
@@ -89,6 +89,7 @@ header .header-wrapper nav input[type="search"] {
 @media (max-width: 700px) {
   header .header-wrapper nav input[type="search"] {
     overflow: hidden;
+    display: none;
   }
 }
 
@@ -123,6 +124,12 @@ header .header-wrapper nav ul li ahover {
   background: white;
   padding: 0px 0px;
   position: fixed;
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    display: none;
+  }
 }
 
 .sidebar .about {
@@ -246,20 +253,26 @@ header .header-wrapper nav ul li ahover {
   background-color: white;
   border-radius: .2em;
   text-align: center;
-  margin-left: 70px;
+  margin-left: 85px;
 }
 
 .sidebar .scroll-bar ul .drop .dropmenu {
   display: block;
   background-color: white;
   height: 0;
+  -webkit-transition: all 10s step-end;
+  transition: all 10s step-end;
+  overflow: hidden;
 }
 
 .sidebar .scroll-bar ul .drop .dropmenu ul {
-  width: 240px;
+  width: 230px;
   padding: 0;
   margin: 0;
   height: 0;
+  -webkit-transition: all 10s step-end;
+  transition: all 10s step-end;
+  overflow: hidden;
 }
 
 .sidebar .scroll-bar ul .drop .dropmenu ul li {
@@ -280,11 +293,13 @@ header .header-wrapper nav ul li ahover {
 .sidebar .scroll-bar ul li:hover > .dropmenu {
   -webkit-transition: all .6s ease;
   transition: all .6s ease;
-  height: 150px;
+  height: 145px;
 }
 
 .sidebar .scroll-bar ul li:hover > .dropmenu ul {
-  height: 150px;
+  height: 145px;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
 }
 
 .sidebar .scroll-bar ul li a {

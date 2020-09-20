@@ -10,6 +10,15 @@
         }
     }
 
+    @media (max-width:650px) {
+        button{
+            display: none;
+        }
+        .cal{
+            display: none;
+        }
+    }
+
     h4{
         background-color: none;
         margin-left:20px;
